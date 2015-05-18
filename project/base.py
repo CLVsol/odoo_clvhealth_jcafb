@@ -29,12 +29,14 @@ update = False
 hostname = 'localhost'
 server = 'http://localhost:8069'
 admin = 'admin'
-admin_pw = '*'
+admin_pw = 'admin'
+# admin_pw = '*'
 sock_common_url = 'http://localhost:8069/xmlrpc/common'
 sock_str = 'http://localhost:8069/xmlrpc/object'
 
 admin_user = 'admin'
-admin_user_pw = '*' 
+admin_user_pw = 'admin' 
+# admin_user_pw = '*' 
 admin_user_email = 'admin@clvsol.com'
 
 #dbname = '*'
@@ -52,7 +54,8 @@ demo_user_email = 'demo.user@clvhealth.org'
 
 data_admin_user_name = 'Data Administrator'
 data_admin_user = 'data.admin'
-data_admin_user_pw = '*' 
+data_admin_user_pw = 'data.admin' 
+#data_admin_user_pw = '*' 
 data_admin_user_email = 'data.admin@clvsol.com'
 
 CompayName = 'CLVhealth-JCAFB'

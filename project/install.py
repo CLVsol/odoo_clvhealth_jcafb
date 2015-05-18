@@ -95,62 +95,6 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('clv_address_cst', update)
 
-    # new_module = install_update_module('clv_place', update, True)
-
-    # new_module = install_update_module('clv_place_cst', update)
-
-    # new_module = install_update_module('clv_frame', update, True)
-
-    # new_module = install_update_module('clv_frame_cst', update)
-
-    # new_module = install_update_module('clv_tray', update, True)
-
-    # new_module = install_update_module('clv_tray_cst', update)
-
-    # new_module = install_update_module('clv_batch', update, True)
-
-    # new_module = install_update_module('clv_batch_cst', update)
-
-    # new_module = install_update_module('clv_insurance', update, True)
-
-    # new_module = install_update_module('clv_insurance_cst', update)
-
-    # new_module = install_update_module('clv_insurance_client', update, True)
-
-    # new_module = install_update_module('clv_insurance_client_cst', update)
-
-    # new_module = install_update_module('clv_insured', update, True)
-
-    # new_module = install_update_module('l10n_br_clv_insured', update)
-
-    # new_module = install_update_module('clv_insured_cst', update)
-
-    # new_module = install_update_module('clv_insured_card', update, True)
-
-    # new_module = install_update_module('clv_insured_card_cst', update)
-
-    # new_module = install_update_module('clv_insured_mng', update, True)
-
-    # new_module = install_update_module('l10n_br_clv_insured_mng', update)
-
-    # new_module = install_update_module('clv_medicament', update, True)
-
-    # new_module = install_update_module('clv_medicament_cst', update)
-
-    # new_module = install_update_module('clv_medicament_mng', update, True)
-
-    # new_module = install_update_module('l10n_br_clv_abcfarma', update)
-
-    # new_module = install_update_module('clv_medicament_catalog', update, True)
-
-    # new_module = install_update_module('clv_medicament_catalog_member', update)
-
-    # new_module = install_update_module('clv_medicament_group', update, True)
-
-    # new_module = install_update_module('clv_medicament_group_cst', update)
-
-    # new_module = install_update_module('clv_medicament_group_member', update)
-
 def secondsToStr(t):
     return "%d:%02d:%02d.%03d" % reduce(lambda ll,b : divmod(ll[0],b) + ll[1:],[(t*1000,),1000,60,60])
 
@@ -158,9 +102,9 @@ if __name__ == '__main__':
 
     from time import time
 
-    start = time()
-
     base.get_arguments()
+
+    start = time()
 
     print '--> Executing clvhealth_jcafb_install.py...'
 
