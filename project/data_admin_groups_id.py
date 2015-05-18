@@ -22,7 +22,7 @@ import base
 
 import xmlrpclib
 
-def Administrator_groups_id_clv_base():
+def Data_Administrator_groups_id_clv_base():
 
     '''
     Reference: http://help.openerp.com/question/18704/hide-menu-for-existing-group/
@@ -40,13 +40,13 @@ def Administrator_groups_id_clv_base():
         (6, 0, [IDs]) -- replace the list of linked IDs (like using (5) then (4,ID) for each ID in the list of IDs)
     '''
 
-    print 'Executing Administrator_groups_id_clv_base...'
+    print 'Executing Data_Administrator_groups_id_clv_base...'
 
     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-    args = [('name', '=', 'Administrator'),]
+    args = [('name', '=', 'Data Administrator'),]
     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
     # clv_base
@@ -73,15 +73,15 @@ def Administrator_groups_id_clv_base():
 
     print 'Done.'
 
-def Administrator_groups_id_clv_tag():
+def Data_Administrator_groups_id_clv_tag():
 
-    print 'Executing Administrator_groups_id_clv_tag...'
+    print 'Executing Data_Administrator_groups_id_clv_tag...'
 
     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-    args = [('name', '=', 'Administrator'),]
+    args = [('name', '=', 'Data Administrator'),]
     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
     # clv_tag
@@ -96,15 +96,15 @@ def Administrator_groups_id_clv_tag():
 
     print 'Done.'
 
-def Administrator_groups_id_clv_annotation():
+def Data_Administrator_groups_id_clv_annotation():
 
-    print 'Executing Administrator_groups_id_clv_annotation...'
+    print 'Executing Data_Administrator_groups_id_clv_annotation...'
 
     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-    args = [('name', '=', 'Administrator'),]
+    args = [('name', '=', 'Data Administrator'),]
     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
     # clv_annotation
@@ -119,15 +119,15 @@ def Administrator_groups_id_clv_annotation():
 
     print 'Done.'
 
-def Administrator_groups_id_clv_address():
+def Data_Administrator_groups_id_clv_address():
 
-    print 'Executing Administrator_groups_id_clv_address...'
+    print 'Executing Data_Administrator_groups_id_clv_address...'
 
     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-    args = [('name', '=', 'Administrator'),]
+    args = [('name', '=', 'Data Administrator'),]
     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
     # clv_address
@@ -142,15 +142,15 @@ def Administrator_groups_id_clv_address():
 
     print 'Done.'
 
-# def Administrator_groups_id_clv_place():
+# def Data_Administrator_groups_id_clv_place():
 
-#     print 'Executing Administrator_groups_id_clv_place...'
+#     print 'Executing Data_Administrator_groups_id_clv_place...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_place
@@ -165,15 +165,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_frame():
+# def Data_Administrator_groups_id_clv_frame():
 
-#     print 'Executing Administrator_groups_id_clv_frame...'
+#     print 'Executing Data_Administrator_groups_id_clv_frame...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_frame
@@ -188,15 +188,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_tray():
+# def Data_Administrator_groups_id_clv_tray():
 
-#     print 'Executing Administrator_groups_id_clv_tray...'
+#     print 'Executing Data_Administrator_groups_id_clv_tray...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_tray
@@ -211,15 +211,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_batch():
+# def Data_Administrator_groups_id_clv_batch():
 
-#     print 'Executing Administrator_groups_id_clv_batch..'
+#     print 'Executing Data_Administrator_groups_id_clv_batch..'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_batch
@@ -234,15 +234,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_insurance():
+# def Data_Administrator_groups_id_clv_insurance():
 
-#     print 'Executing Administrator_groups_id_clv_insurance...'
+#     print 'Executing Data_Administrator_groups_id_clv_insurance...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_insurance
@@ -257,15 +257,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_insurance_client():
+# def Data_Administrator_groups_id_clv_insurance_client():
 
-#     print 'Executing Administrator_groups_id_clv_insurance_client...'
+#     print 'Executing Data_Administrator_groups_id_clv_insurance_client...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_insurance_client
@@ -280,15 +280,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_insured():
+# def Data_Administrator_groups_id_clv_insured():
 
-#     print 'Executing Administrator_groups_id_clv_insured...'
+#     print 'Executing Data_Administrator_groups_id_clv_insured...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_insured
@@ -303,15 +303,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_insured_card():
+# def Data_Administrator_groups_id_clv_insured_card():
 
-#     print 'Executing Administrator_groups_id_clv_insured_card...'
+#     print 'Executing Data_Administrator_groups_id_clv_insured_card...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_insured_card
@@ -326,15 +326,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_insured_mng():
+# def Data_Administrator_groups_id_clv_insured_mng():
 
-#     print 'Executing Administrator_groups_id_clv_insured_mng...'
+#     print 'Executing Data_Administrator_groups_id_clv_insured_mng...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_insured_mng
@@ -349,15 +349,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_medicament():
+# def Data_Administrator_groups_id_clv_medicament():
 
-#     print 'Executing Administrator_groups_id_clv_medicament...'
+#     print 'Executing Data_Administrator_groups_id_clv_medicament...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_medicament
@@ -372,15 +372,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_medicament_catalog():
+# def Data_Administrator_groups_id_clv_medicament_catalog():
 
-#     print 'Executing Administrator_groups_id_clv_medicament_catalog...'
+#     print 'Executing Data_Administrator_groups_id_clv_medicament_catalog...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_medicament_catalog
@@ -395,15 +395,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_medicament_group():
+# def Data_Administrator_groups_id_clv_medicament_group():
 
-#     print 'Executing Administrator_groups_id_clv_medicament_group...'
+#     print 'Executing Data_Administrator_groups_id_clv_medicament_group...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_medicament_group
@@ -418,15 +418,15 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-# def Administrator_groups_id_clv_medicament_mng():
+# def Data_Administrator_groups_id_clv_medicament_mng():
 
-#     print 'Executing Administrator_groups_id_clv_medicament_mng...'
+#     print 'Executing Data_Administrator_groups_id_clv_medicament_mng...'
 
 #     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
 #     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
 #     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-#     args = [('name', '=', 'Administrator'),]
+#     args = [('name', '=', 'Data Administrator'),]
 #     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
 #     # clv_medicament_mng
@@ -441,7 +441,7 @@ def Administrator_groups_id_clv_address():
 
 #     print 'Done.'
 
-def Administrator_groups_id_clvhealth_jcafb():
+def Data_Administrator_groups_id_clvhealth_jcafb():
 
     '''
     Reference: http://help.openerp.com/question/18704/hide-menu-for-existing-group/
@@ -459,13 +459,13 @@ def Administrator_groups_id_clvhealth_jcafb():
         (6, 0, [IDs]) -- replace the list of linked IDs (like using (5) then (4,ID) for each ID in the list of IDs)
     '''
 
-    print 'Executing Administrator_groups_id_clvhealth_futuragene...'
+    print 'Executing Data_Administrator_groups_id_clvhealth_futuragene...'
 
     sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-    args = [('name', '=', 'Administrator'),]
+    args = [('name', '=', 'Data Administrator'),]
     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
     print 'Done.'
