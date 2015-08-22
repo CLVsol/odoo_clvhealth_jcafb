@@ -6,43 +6,43 @@ clvsol_odoo_clvhealth_jcafb
     ::
 
         cd '/opt/openerp/jcafb'
-        gzip -d clvhealth_jcafb_pro_2015-03-23a.sql.gz
+        gzip -d clvhealth_jcafb_pro_2015-08-22a.sql.gz
         dropdb -i clvhealth_jcafb_dev -U postgres
         createdb -O openuser -E UTF8 -T template0 clvhealth_jcafb_dev -U postgres
-        psql -f clvhealth_jcafb_pro_2015-03-23a.sql -d clvhealth_jcafb_dev -h localhost -p 5432 -q -U postgres
+        psql -f clvhealth_jcafb_pro_2015-08-22a.sql -d clvhealth_jcafb_dev -h localhost -p 5432 -q -U postgres
 
         cd '/opt/openerp/jcafb'
         pg_dump clvhealth_jcafb_dev -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_dev.sql
-        mv clvhealth_jcafb_dev.sql clvhealth_jcafb_dev_2015-03-23a.sql
-        gzip clvhealth_jcafb_dev_2015-03-23a.sql
+        mv clvhealth_jcafb_dev.sql clvhealth_jcafb_dev_2015-08-22a.sql
+        gzip clvhealth_jcafb_dev_2015-08-22a.sql
 
     ::
 
         cd '/opt/openerp/jcafb'
         dropdb -i clvhealth_jcafb_dev -U postgres
         createdb -O openuser -E UTF8 -T template0 clvhealth_jcafb_dev -U postgres
-        psql -f clvhealth_jcafb_dev_2015-03-23a.sql -d clvhealth_jcafb_dev -h localhost -p 5432 -q -U postgres
+        psql -f clvhealth_jcafb_dev_2015-08-22a.sql -d clvhealth_jcafb_dev -h localhost -p 5432 -q -U postgres
 
     ::
 
         cd cd '/opt/openerp/clvsol_odoo_clvhealth_jcafb/project'
         python install.py
 
-* tkl-lamp-odoo-bb-tst
+* tkl-lamp-odoo-jcafb-tst
 
     ::
         
-        git clone https://bitbucket.org/cvercelino/clvsol_odoo_addons /opt/openerp/clvsol_odoo_addons --branch 8.0-priv
+        git clone https://github.com/CLVsol/odoo_addons /opt/openerp/clvsol_odoo_addons --branch 8.0
         chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons
 
     ::
         
-        git clone https://bitbucket.org/cvercelino/clvsol_odoo_addons_l10n_br /opt/openerp/clvsol_odoo_addons_l10n_br --branch 8.0-priv
+        git clone https://github.com/CLVsol/odoo_addons_l10n_br /opt/openerp/clvsol_odoo_addons_l10n_br --branch 8.0
         chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons_l10n_br
 
     ::
         
-        git clone https://bitbucket.org/cvercelino/clvsol_odoo_addons_jcafb /opt/openerp/clvsol_odoo_addons_jcafb --branch 8.0
+        git clone https://github.com/CLVsol/odoo_addons_jcafb /opt/openerp/clvsol_odoo_addons_jcafb --branch 8.0
         chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons_jcafb
 
     ::
@@ -75,21 +75,21 @@ clvsol_odoo_clvhealth_jcafb
 		git pull
 		exit
 
-* tkl-lamp-odoo-bb-pro
+* tkl-lamp-odoo-jcafb-pro
 
     ::
         
-        git clone https://bitbucket.org/cvercelino/clvsol_odoo_addons /opt/openerp/clvsol_odoo_addons --branch 8.0-priv
+        git clone https://github.com/CLVsol/odoo_addons /opt/openerp/clvsol_odoo_addons --branch 8.0
         chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons
 
     ::
         
-        git clone https://bitbucket.org/cvercelino/clvsol_odoo_addons_l10n_br /opt/openerp/clvsol_odoo_addons_l10n_br --branch 8.0-priv
+        git clone https://github.com/CLVsol/odoo_addons_l10n_br /opt/openerp/clvsol_odoo_addons_l10n_br --branch 8.0
         chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons_l10n_br
 
     ::
         
-        git clone https://bitbucket.org/cvercelino/clvsol_odoo_addons_jcafb /opt/openerp/clvsol_odoo_addons_jcafb --branch 8.0
+        git clone https://github.com/CLVsol/odoo_addons_jcafb /opt/openerp/clvsol_odoo_addons_jcafb --branch 8.0
         chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons_jcafb
 
     ::
