@@ -75,7 +75,7 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('l10n_br_zip', update)
 
-    new_module = install_update_module('l10n_br_data_zip', update)
+    # new_module = install_update_module('l10n_br_data_zip', update)
 
     new_module = install_update_module('clv_base', update, True)
 
