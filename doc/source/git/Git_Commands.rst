@@ -17,5 +17,8 @@ Commands
 
 		git rebase 8.0-dev
 
+		git status -s
+		git log --oneline --all --graph --decorate
+
 .. toctree::
    :maxdepth: 2
