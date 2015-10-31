@@ -71,45 +71,45 @@ def clvhealth_jcafb_install():
         proxy = client.model('ir.module.module')
         proxy.update_list()
 
-    new_module = install_update_module('l10n_br_base', update)
+    # new_module = install_update_module('l10n_br_base', update)
 
-    new_module = install_update_module('l10n_br_zip', update)
+    # new_module = install_update_module('l10n_br_zip', update)
 
-    # new_module = install_update_module('l10n_br_data_zip', update)
+    # # new_module = install_update_module('l10n_br_data_zip', update)
 
-    new_module = install_update_module('clv_base', update, True)
+    # new_module = install_update_module('clv_base', update, True)
 
-    new_module = install_update_module('clv_base_cst', update)
+    # new_module = install_update_module('clv_base_cst', update)
 
-    new_module = install_update_module('clv_tag', update, True)
+    # new_module = install_update_module('clv_tag', update, True)
 
-    new_module = install_update_module('clv_tag_cst', update)
+    # new_module = install_update_module('clv_tag_cst', update)
 
-    new_module = install_update_module('clv_annotation', update, True)
+    # new_module = install_update_module('clv_annotation', update, True)
 
-    new_module = install_update_module('clv_annotation_cst', update)
+    # new_module = install_update_module('clv_annotation_cst', update)
 
-    new_module = install_update_module('clv_address', update, True)
+    # new_module = install_update_module('clv_address', update, True)
 
-    new_module = install_update_module('l10n_br_clv_address', update)
+    # new_module = install_update_module('l10n_br_clv_address', update)
 
-    new_module = install_update_module('clv_address_cst', update)
+    # new_module = install_update_module('clv_address_cst', update)
 
-    new_module = install_update_module('clv_person', update, True)
+    # new_module = install_update_module('clv_person', update, True)
 
-    new_module = install_update_module('clv_person_cst', update)
+    # new_module = install_update_module('clv_person_cst', update)
 
-    new_module = install_update_module('clv_family', update, True)
+    # new_module = install_update_module('clv_family', update, True)
 
-    new_module = install_update_module('clv_family_cst', update)
+    # new_module = install_update_module('clv_family_cst', update)
 
-    new_module = install_update_module('clv_patient', update, True)
+    # new_module = install_update_module('clv_patient', update, True)
 
-    new_module = install_update_module('clv_patient_cst', update)
+    # new_module = install_update_module('clv_patient_cst', update)
 
-    # new_module = install_update_module('clv_survey', update, True)
+    # # new_module = install_update_module('clv_survey', update, True)
 
-    # new_module = install_update_module('jcafb_2015_surveys', update)
+    # # new_module = install_update_module('jcafb_2015_surveys', update)
 
 def secondsToStr(t):
     return "%d:%02d:%02d.%03d" % reduce(lambda ll,b : divmod(ll[0],b) + ll[1:],[(t*1000,),1000,60,60])
