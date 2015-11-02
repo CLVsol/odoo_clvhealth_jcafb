@@ -28,6 +28,46 @@ clvsol_odoo_clvhealth_jcafb
         cd cd '/opt/openerp/clvsol_odoo_clvhealth_jcafb/project'
         python install.py
 
+* clvhealh-jcafb-2016-pro
+
+    ::
+        
+        git clone https://github.com/CLVsol/odoo_addons /opt/openerp/clvsol_odoo_addons --branch 8.0
+        chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons
+
+    ::
+        
+        git clone https://github.com/CLVsol/odoo_addons_l10n_br /opt/openerp/clvsol_odoo_addons_l10n_br --branch 8.0
+        chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons_l10n_br
+
+    ::
+        
+        git clone https://github.com/CLVsol/odoo_addons_jcafb /opt/openerp/clvsol_odoo_addons_jcafb --branch 8.0
+        chown -R openerp:openerp /opt/openerp/clvsol_odoo_addons_jcafb
+
+    ::
+
+        cd '/opt/openerp/jcafb'
+        gzip -d clvhealth_jcafb_dev_2015-11-02a.sql.gz
+        su postgres
+        dropdb -i clvhealth_jcafb_pro
+        createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_pro
+        psql -f clvhealth_jcafb_dev_2015-11-02a.sql -d clvhealth_jcafb_pro -h localhost -p 5432 -q
+        exit
+
+    ::
+
+        cd '/opt/openerp/jcafb'
+        pg_dump clvhealth_jcafb_pro -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_pro.sql
+        mv clvhealth_jcafb_pro.sql clvhealth_jcafb_dev_2015-11-02a.sql
+        gzip clvhealth_jcafb_dev_2015-11-02a.sql
+
+    ::
+        
+        cd /opt/openerp/odoo
+        su openerp
+        ./openerp-server -c openerp-server-man.conf
+
 * tkl-lamp-odoo-jcafb-tst
 
     ::
