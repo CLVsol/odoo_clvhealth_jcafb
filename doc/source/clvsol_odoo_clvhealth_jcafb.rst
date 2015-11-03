@@ -8,7 +8,7 @@ clvsol_odoo_clvhealth_jcafb
         cd '/opt/openerp/jcafb'
         gzip -d clvhealth_jcafb_pro_2015-08-22a.sql.gz
         dropdb -i clvhealth_jcafb_dev -U postgres
-        createdb -O openuser -E UTF8 -T template0 clvhealth_jcafb_dev -U postgres
+        createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_dev -U postgres
         psql -f clvhealth_jcafb_pro_2015-08-22a.sql -d clvhealth_jcafb_dev -h localhost -p 5432 -q -U postgres
 
         cd '/opt/openerp/jcafb'
@@ -20,7 +20,7 @@ clvsol_odoo_clvhealth_jcafb
 
         cd '/opt/openerp/jcafb'
         dropdb -i clvhealth_jcafb_dev -U postgres
-        createdb -O openuser -E UTF8 -T template0 clvhealth_jcafb_dev -U postgres
+        createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_dev -U postgres
         psql -f clvhealth_jcafb_dev_2015-08-22a.sql -d clvhealth_jcafb_dev -h localhost -p 5432 -q -U postgres
 
     ::
@@ -91,7 +91,7 @@ clvsol_odoo_clvhealth_jcafb
         gzip -d clvhealth_jcafb_dev_2015-04-11b_063.sql.gz
         su postgres
         dropdb -i clvhealth_jcafb_tst -U postgres
-        createdb -O openuser -E UTF8 -T template0 clvhealth_jcafb_tst -U postgres
+        createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_tst -U postgres
         psql -f clvhealth_jcafb_dev_2015-04-11b_063.sql -d clvhealth_jcafb_tst -h localhost -p 5432 -q -U postgres
         exit
 
@@ -138,7 +138,7 @@ clvsol_odoo_clvhealth_jcafb
         gzip -d clvhealth_jcafb_pro_2015-03-30a.sql.gz
         su postgres
         dropdb -i clvhealth_jcafb_pro -U postgres
-        createdb -O openuser -E UTF8 -T template0 clvhealth_jcafb_pro -U postgres
+        createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_pro -U postgres
         psql -f clvhealth_jcafb_pro_2015-03-30a.sql -d clvhealth_jcafb_pro -h localhost -p 5432 -q -U postgres
         exit
 
