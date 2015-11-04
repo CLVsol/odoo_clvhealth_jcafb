@@ -89,15 +89,17 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('clv_annotation_cst', update)
 
-    # new_module = install_update_module('clv_address', update, True)
+    new_module = install_update_module('clv_address', update, True)
 
-    # new_module = install_update_module('l10n_br_clv_address', update)
+    new_module = install_update_module('l10n_br_clv_address', update)
 
-    # new_module = install_update_module('clv_address_cst', update)
+    new_module = install_update_module('clv_address_cst', update)
 
-    # new_module = install_update_module('clv_person', update, True)
+    new_module = install_update_module('clv_person', update, True)
 
-    # new_module = install_update_module('clv_person_cst', update)
+    new_module = install_update_module('l10n_br_clv_person', update)
+
+    new_module = install_update_module('clv_person_cst', update)
 
     # new_module = install_update_module('clv_family', update, True)
 
