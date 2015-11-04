@@ -71,23 +71,23 @@ def clvhealth_jcafb_install():
         proxy = client.model('ir.module.module')
         proxy.update_list()
 
-    # new_module = install_update_module('l10n_br_base', update)
+    new_module = install_update_module('l10n_br_base', update)
 
-    # new_module = install_update_module('l10n_br_zip', update)
+    new_module = install_update_module('l10n_br_zip', update)
 
-    # # new_module = install_update_module('l10n_br_data_zip', update)
+    # new_module = install_update_module('l10n_br_data_zip', update)
 
-    # new_module = install_update_module('clv_base', update, True)
+    new_module = install_update_module('clv_base', update, True)
 
-    # new_module = install_update_module('clv_base_cst', update)
+    new_module = install_update_module('clv_base_cst', update)
 
-    # new_module = install_update_module('clv_tag', update, True)
+    new_module = install_update_module('clv_tag', update, True)
 
-    # new_module = install_update_module('clv_tag_cst', update)
+    new_module = install_update_module('clv_tag_cst', update)
 
-    # new_module = install_update_module('clv_annotation', update, True)
+    new_module = install_update_module('clv_annotation', update, True)
 
-    # new_module = install_update_module('clv_annotation_cst', update)
+    new_module = install_update_module('clv_annotation_cst', update)
 
     # new_module = install_update_module('clv_address', update, True)
 
