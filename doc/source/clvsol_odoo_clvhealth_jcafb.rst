@@ -63,6 +63,15 @@ clvsol_odoo_clvhealth_jcafb
         gzip clvhealth_jcafb_dev_2015-11-02a.sql
 
     ::
+
+    	addons_path = /opt/openerp/odoo/addons,/opt/openerp/clvsol_odoo_addons,/opt/openerp/clvsol_odoo_addons_l10n_br,/opt/openerp/clvsol_odoo_addons_jcafb
+    	
+    ::
+
+        /etc/init.d/openerp-server stop
+        /etc/init.d/openerp-server start
+
+    ::
         
         cd /opt/openerp/odoo
         su openerp
