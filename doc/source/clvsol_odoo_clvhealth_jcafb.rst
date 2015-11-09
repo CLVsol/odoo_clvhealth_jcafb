@@ -60,22 +60,36 @@ clvsol_odoo_clvhealth_jcafb
         cd '/opt/openerp/jcafb'
         pg_dump clvhealth_jcafb_pro -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_pro.sql
         mv clvhealth_jcafb_pro.sql clvhealth_jcafb_dev_2015-11-02a.sql
-        gzip clvhealth_jcafb_dev_2015-11-02a.sql
+        gzip clvhealth_jcafb_pro_2015-11-02a.sql
 
     ::
 
-    	addons_path = /opt/openerp/odoo/addons,/opt/openerp/clvsol_odoo_addons,/opt/openerp/clvsol_odoo_addons_l10n_br,/opt/openerp/clvsol_odoo_addons_jcafb
-    	
+        addons_path = /opt/openerp/odoo/addons,/opt/openerp/clvsol_odoo_addons,/opt/openerp/clvsol_odoo_addons_l10n_br,/opt/openerp/clvsol_odoo_addons_jcafb
+
     ::
 
         /etc/init.d/openerp-server stop
         /etc/init.d/openerp-server start
 
     ::
-        
+
         cd /opt/openerp/odoo
         su openerp
-        ./openerp-server -c openerp-server-man.conf
+        ./openerp-server -c /etc/odoo/openerp-server-man.conf
+
+    ::
+
+        cd /opt/openerp
+        su openerp
+        cd /opt/openerp/odoo
+        git pull
+        cd /opt/openerp/clvsol_odoo_addons
+        git pull
+        cd /opt/openerp/clvsol_odoo_addons_l10n_br
+        git pull
+        cd /opt/openerp/clvsol_odoo_addons_jcafb
+        git pull
+        exit
 
 * tkl-lamp-odoo-jcafb-tst
 
@@ -105,24 +119,40 @@ clvsol_odoo_clvhealth_jcafb
         exit
 
     ::
-        
+
+        cd '/opt/openerp/jcafb'
+        pg_dump clvhealth_jcafb_tst -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_tst.sql
+        mv clvhealth_jcafb_tst.sql clvhealth_jcafb_tst_2015-11-02a.sql
+        gzip clvhealth_jcafb_tst_2015-11-02a.sql
+
+    ::
+
+        addons_path = /opt/openerp/odoo/addons,/opt/openerp/clvsol_odoo_addons,/opt/openerp/clvsol_odoo_addons_l10n_br,/opt/openerp/clvsol_odoo_addons_jcafb
+
+    ::
+
+        /etc/init.d/openerp-server stop
+        /etc/init.d/openerp-server start
+
+    ::
+
         cd /opt/openerp/odoo
         su openerp
-        ./openerp-server -c openerp-server-man.conf
+        ./openerp-server -c /etc/odoo/openerp-server-man.conf
 
-	::
+    ::
 
-		cd /opt/openerp
-		su openerp
-		cd /opt/openerp/odoo
-		git pull
-		cd /opt/openerp/clvsol_odoo_addons
-		git pull
-		cd /opt/openerp/clvsol_odoo_addons_l10n_br
-		git pull
-		cd /opt/openerp/clvsol_odoo_addons_jcafb
-		git pull
-		exit
+        cd /opt/openerp
+        su openerp
+        cd /opt/openerp/odoo
+        git pull
+        cd /opt/openerp/clvsol_odoo_addons
+        git pull
+        cd /opt/openerp/clvsol_odoo_addons_l10n_br
+        git pull
+        cd /opt/openerp/clvsol_odoo_addons_jcafb
+        git pull
+        exit
 
 * tkl-lamp-odoo-jcafb-pro
 
