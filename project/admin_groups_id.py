@@ -234,6 +234,75 @@ def Administrator_groups_id_clv_survey():
 
     print 'Done.'
 
+def Administrator_groups_id_clv_lab_test():
+
+    print 'Executing Administrator_groups_id_clv_lab_test...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'),]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_lab_test
+    values = {
+        'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Lab Test User')])[0])],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Lab Test Manager')])[0])],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+def Administrator_groups_id_clv_pointing():
+
+    print 'Executing Administrator_groups_id_clv_pointing...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'),]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_pointing
+    values = {
+        'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Pointing User')])[0])],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Pointing Manager')])[0])],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
+def Administrator_groups_id_clv_document():
+
+    print 'Executing Administrator_groups_id_clv_document...'
+
+    sock_common = xmlrpclib.ServerProxy(base.sock_common_url)
+    uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
+    sock = xmlrpclib.ServerProxy(base.sock_str)
+
+    args = [('name', '=', 'Administrator'),]
+    user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
+
+    # clv_document
+    values = {
+        'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Document User')])[0])],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    values = {
+        'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Document Manager')])[0])],
+        }
+    sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+
+    print 'Done.'
+
 def Administrator_groups_id_clvhealth_jcafb():
 
     '''

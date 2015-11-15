@@ -113,9 +113,25 @@ def clvhealth_jcafb_install():
 
     # # new_module = install_update_module('jcafb_2015_surveys', update)
 
-    new_module = install_update_module('survey', update)
+    # new_module = install_update_module('mail', update)
 
-    new_module = install_update_module('jcafb_2016_surveys', update)
+    # new_module = install_update_module('hr', update)
+
+    # new_module = install_update_module('website', update)
+
+    # new_module = install_update_module('marketing', update)
+
+    # new_module = install_update_module('survey', update)
+
+    # new_module = install_update_module('jcafb_2016_surveys', update)
+
+    # new_module = install_update_module('product', update)
+
+    # new_module = install_update_module('clv_lab_test', update, True)
+
+    # new_module = install_update_module('clv_pointing', update, True)
+
+    # new_module = install_update_module('clv_document', update, True)
 
 def secondsToStr(t):
     return "%d:%02d:%02d.%03d" % reduce(lambda ll,b : divmod(ll[0],b) + ll[1:],[(t*1000,),1000,60,60])
