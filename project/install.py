@@ -1,22 +1,22 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-################################################################################
-#                                                                              #
-# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol                  #
-#                                                                              #
-# This program is free software: you can redistribute it and/or modify         #
-# it under the terms of the GNU Affero General Public License as published by  #
-# the Free Software Foundation, either version 3 of the License, or            #
-# (at your option) any later version.                                          #
-#                                                                              #
-# This program is distributed in the hope that it will be useful,              #
-# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
-# GNU Affero General Public License for more details.                          #
-#                                                                              #
-# You should have received a copy of the GNU Affero General Public License     #
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.        #
-################################################################################
+###############################################################################
+#                                                                             #
+# Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol                 #
+#                                                                             #
+# This program is free software: you can redistribute it and/or modify        #
+# it under the terms of the GNU Affero General Public License as published by #
+# the Free Software Foundation, either version 3 of the License, or           #
+# (at your option) any later version.                                         #
+#                                                                             #
+# This program is distributed in the hope that it will be useful,             #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of              #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               #
+# GNU Affero General Public License for more details.                         #
+#                                                                             #
+# You should have received a copy of the GNU Affero General Public License    #
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
+###############################################################################
 
 import base
 import admin_groups_id
@@ -24,6 +24,7 @@ import data_admin_groups_id
 
 import xmlrpclib
 import erppeek
+
 
 def install_update_module(module, update, config_admin=False):
 
@@ -48,6 +49,7 @@ def install_update_module(module, update, config_admin=False):
 
     return new_module
 
+
 def clvhealth_jcafb_install():
 
     update = base.update
@@ -66,8 +68,11 @@ def clvhealth_jcafb_install():
         print '--> Data_Administrator_User()'
         base.Data_Administrator_User()
     else:
-        client = erppeek.Client(base.server, db=base.dbname, user=base.admin_user, 
-                                password=base.admin_user_pw, verbose=False)
+        client = erppeek.Client(base.server,
+                                db=base.dbname,
+                                user=base.admin_user,
+                                password=base.admin_user_pw,
+                                verbose=False)
         proxy = client.model('ir.module.module')
         proxy.update_list()
 
@@ -109,13 +114,13 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('clv_patient_cst', update)
 
+    new_module = install_update_module('mail', update)
+
+    new_module = install_update_module('hr', update)
+
     # # new_module = install_update_module('clv_survey', update, True)
 
     # # new_module = install_update_module('jcafb_2015_surveys', update)
-
-    # new_module = install_update_module('mail', update)
-
-    # new_module = install_update_module('hr', update)
 
     # new_module = install_update_module('website', update)
 
@@ -125,16 +130,18 @@ def clvhealth_jcafb_install():
 
     # new_module = install_update_module('jcafb_2016_surveys', update)
 
+    # new_module = install_update_module('clv_document', update, True)
+
     # new_module = install_update_module('product', update)
 
     # new_module = install_update_module('clv_lab_test', update, True)
 
     # new_module = install_update_module('clv_pointing', update, True)
 
-    # new_module = install_update_module('clv_document', update, True)
 
 def secondsToStr(t):
     return "%d:%02d:%02d.%03d" % reduce(lambda ll,b : divmod(ll[0],b) + ll[1:],[(t*1000,),1000,60,60])
+0
 
 if __name__ == '__main__':
 
