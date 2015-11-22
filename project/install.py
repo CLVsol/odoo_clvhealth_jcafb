@@ -118,10 +118,6 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('hr', update)
 
-    # # new_module = install_update_module('clv_survey', update, True)
-
-    # # new_module = install_update_module('jcafb_2015_surveys', update)
-
     new_module = install_update_module('website', update)
 
     new_module = install_update_module('marketing', update)
