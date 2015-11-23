@@ -122,6 +122,10 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('hr', update)
 
+    new_module = install_update_module('clv_employee', update)
+
+    new_module = install_update_module('clv_employee_cst', update)
+
     new_module = install_update_module('website', update)
 
     new_module = install_update_module('marketing', update)
