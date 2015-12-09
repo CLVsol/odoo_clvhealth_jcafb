@@ -136,9 +136,9 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('clv_employee_cst', update)
 
-    # new_module = install_update_module('jcafb_2016_surveys', update)
+    new_module = install_update_module('jcafb_2016_surveys', update)
 
-    # new_module = install_update_module('jcafb_2016_termos', update)
+    new_module = install_update_module('jcafb_2016_consent_forms', update)
 
     # new_module = install_update_module('product', update)
 
