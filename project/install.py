@@ -142,9 +142,9 @@ def clvhealth_jcafb_install():
 
     # new_module = install_update_module('product', update)
 
-    # new_module = install_update_module('clv_lab_test', update, True)
+    new_module = install_update_module('clv_lab_test', update, True)
 
-    # new_module = install_update_module('clv_lab_test_cst', update)
+    new_module = install_update_module('clv_lab_test_cst', update)
 
     # new_module = install_update_module('clv_pointing', update, True)
 
