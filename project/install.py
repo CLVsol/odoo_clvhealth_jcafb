@@ -124,13 +124,13 @@ def clvhealth_jcafb_install():
 
     new_module = install_update_module('clv_family_cst', update)
 
-    new_module = install_update_module('clv_patient', update, True)
-
-    new_module = install_update_module('clv_patient_cst', update)
-
     new_module = install_update_module('clv_community', update, True)
 
     new_module = install_update_module('clv_community_cst', update)
+
+    new_module = install_update_module('clv_patient', update, True)
+
+    new_module = install_update_module('clv_patient_cst', update)
 
     new_module = install_update_module('clv_employee', update)
 
