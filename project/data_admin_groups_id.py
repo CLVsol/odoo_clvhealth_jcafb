@@ -258,6 +258,7 @@ def Data_Administrator_groups_id_clv_survey():
 
     print 'Done.'
 
+
 def Data_Administrator_groups_id_clv_lab_test():
 
     print 'Executing Data_Administrator_groups_id_clv_lab_test...'
@@ -266,7 +267,7 @@ def Data_Administrator_groups_id_clv_lab_test():
     uid = sock_common.login(base.dbname, base.admin_user, base.admin_user_pw)
     sock = xmlrpclib.ServerProxy(base.sock_str)
 
-    args = [('name', '=', 'Data Administrator'),]
+    args = [('name', '=', 'Data Administrator'), ]
     user_id = sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'search', args)
 
     # clv_lab_test
@@ -278,6 +279,10 @@ def Data_Administrator_groups_id_clv_lab_test():
         'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Lab Test Manager')])[0])],
         }
     sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
+    # values = {
+    #     'groups_id': [(4, sock.execute(base.dbname, uid, base.admin_user_pw, 'res.groups', 'search', [('name', '=', 'Lab Test Approver')])[0])],
+    #     }
+    # sock.execute(base.dbname, uid, base.admin_user_pw, 'res.users', 'write', user_id, values)
 
     print 'Done.'
 
